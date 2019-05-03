@@ -1,0 +1,11 @@
+[Unit]
+Description=RFKill Unblock
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 60
+ExecStart=/usr/bin/rfkill-unblock.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
